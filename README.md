@@ -1,5 +1,9 @@
 # MLR robotics course & practical robotics course
 
+## Team :
+
+1. Gokul Kannan - st165659@stud.uni-stuttgart.de
+
 This repo is based on RAI code, including its python bindings. See https://github.com/MarcToussaint/rai for a README of the RAI code.
 
 ## Table of Contents
