@@ -41,6 +41,9 @@ void use_within_simulation(){
   //-- basic setup
   rai::Configuration RealWorld;
   RealWorld.addFile("../../scenarios/challenge.g");
+
+  RealWorld.getFrameByName("obj1")->setColor({1.,0,0}); //set the color of one objet to red!
+
   rai::Simulation S(RealWorld, S._physx, true);
   S.cameraview().addSensor("camera");
 
