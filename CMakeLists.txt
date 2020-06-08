@@ -11,7 +11,7 @@ add_compile_options(
 add_definitions(
   -DRAI_ROOT_PATH=\"${CMAKE_SOURCE_DIR}/rai\"
   -DRAI_X11 -DRAI_LAPACK -DRAI_EIGEN -DRAI_PTHREAD -DRAI_GL
-  -DRAI_GLFW -DRAI_ANN -DRAI_QHULL -DRAI_ASSIMP -DNO_CYCLE_DETECTION
+  -DRAI_GLFW -DRAI_ANN -DRAI_QHULL -DRAI_ASSIMP -DNO_CYCLE_DETECTION -DRAI_PNG
   -DRAI_SWIFT -DRAI_GJK -DRAI_FCL -DRAI_CCD
   -DRAI_OPENCV
   -DRAI_PYBIND
@@ -66,13 +66,13 @@ add_library(rai SHARED
   #${SRC_LGP}
   #${SRC_RosCom}
   ${SRC_Perception}
-  #${SRC_Control}
+  ${SRC_Control}
   #${SRC_Operate}
   #  ${SRC_ry}
   )
 
 target_link_libraries(rai
-  jsoncpp lapack blas assimp fcl ann glfw GLEW glut GLU GL X11 qhull pthread rt
+  jsoncpp lapack blas assimp fcl ann glfw GLEW glut GLU GL X11 png qhull pthread rt
   ${OpenCV_LIBS}
   PhysX3Extensions PhysX3_x64 PhysX3Cooking_x64 PhysX3Common_x64 PxFoundation_x64
   #BulletSoftBody BulletDynamics BulletCollision LinearMath 
